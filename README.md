@@ -154,6 +154,7 @@ In order to test this, you can use the following sample script. Please copy and 
 ```javascript
 function sample1() {
   const templateId = "###"; // Please set your template ID. In this case, please set the Google Document ID as the template.
+  const folder_ = DriveApp.getFolderById("###"); // Please set your folder ID. The result Document is put into the folder.
 
   const spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
   const sheet = spreadsheet.getSheetByName("Sheet1"); // Please set your sheet name.
@@ -205,6 +206,7 @@ In order to test this, you can use the following sample script. Please copy and 
 ```javascript
 function sample2() {
   const templateId = "###"; // Please set your template ID. In this case, please set the Google Slide ID as the template.
+  const folder_ = DriveApp.getFolderById("###"); // Please set your folder ID. The result Document is put into the folder.
 
   const sheet = spreadsheet.getSheetByName("Sheet1"); // Please set your sheet name.
   const range = sheet.getDataRange();
@@ -252,10 +254,10 @@ I added this method for using simple values. In this method, Spreadsheet is not 
 
 ```javascript
 function sample3() {
+  const folder_ = DriveApp.getFolderById("###"); // Please set your folder ID. The result Document is put into the folder.
   const templateId = "###"; // Please set your template ID. In this case, please set the Google Document ID as the template.
   const imageFileId1 = "### Image file ID1 ###"; // Please set the file ID of image file.
-  const imageFileLink2 =
-    "https://stackoverflow.design/assets/img/logos/so/logo-stackoverflow.png"; // Please set the direct link of the image.
+  const imageFileLink2 = "https://stackoverflow.design/assets/img/logos/so/logo-stackoverflow.png"; // Please set the direct link of the image.
   const imageFileId3 = "### Image file ID2 ###"; // Please set the file ID of image file.
   const blob1 = DriveApp.getFileById(imageFileId1).getBlob();
   const blob2 = UrlFetchApp.fetch(imageFileLink2).getBlob();
@@ -307,10 +309,10 @@ I added this method for using simple values. In this method, Spreadsheet is not 
 
 ```javascript
 function sample4() {
+  const folder_ = DriveApp.getFolderById("###"); // Please set your folder ID. The result Document is put into the folder.
   const templateId = "###"; // Please set your template ID. In this case, please set the Google Slide ID as the template.
   const imageFileId1 = "### Image file ID1 ###"; // Please set the file ID of image file.
-  const imageFileLink2 =
-    "https://stackoverflow.design/assets/img/logos/so/logo-stackoverflow.png"; // Please set the direct link of the image.
+  const imageFileLink2 = "https://stackoverflow.design/assets/img/logos/so/logo-stackoverflow.png"; // Please set the direct link of the image.
   const imageFileId3 = "### Image file ID2 ###"; // Please set the file ID of image file.
   const blob1 = DriveApp.getFileById(imageFileId1).getBlob();
   const blob2 = UrlFetchApp.fetch(imageFileLink2).getBlob();
