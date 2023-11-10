@@ -208,6 +208,7 @@ function sample2() {
   const templateId = "###"; // Please set your template ID. In this case, please set the Google Slide ID as the template.
   const folder_ = DriveApp.getFolderById("###"); // Please set your folder ID. The result Document is put into the folder.
 
+  const spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
   const sheet = spreadsheet.getSheetByName("Sheet1"); // Please set your sheet name.
   const range = sheet.getDataRange();
 
@@ -220,7 +221,7 @@ function sample2() {
   const useStyleOfSpreadsheet = false;
   const rowsToEachPageInSlide = true;
   const object = {
-    range: getRangeFromSheet_(),
+    range,
     slide: { slides, rowsToEachPageInSlide },
     useStyleOfSpreadsheet: true,
     useImageAsPlaceholder: true,
@@ -377,5 +378,9 @@ In this method, the simple values can be used. But, it is required to prepare th
 - v1.0.0 (June 11, 2023)
 
   1. Initial release.
+
+- v1.0.1 (November 10, 2023)
+
+  1. I noticed that I miscopied the sample script of "sheetRangeToSlides" in `README.md`. So, I updated it.
 
 [TOP](#top)
