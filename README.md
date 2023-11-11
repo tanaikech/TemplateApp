@@ -218,8 +218,7 @@ function sample2() {
     SlidesApp.openById(file.makeCopy(`sample_slide_${i + 1}`, folder_).getId())
   );
 
-  const useStyleOfSpreadsheet = false;
-  const rowsToEachPageInSlide = true;
+  cconst rowsToEachPageInSlide = false;
   const object = {
     range,
     slide: { slides, rowsToEachPageInSlide },
